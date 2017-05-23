@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Wordpress filter that check if the category/categories are included in the cart,
+ * and exclude the available method shipping that contain this category/categories them.
+ * @param $available_methods Available methods of shipping
+ * @return mixed Alterate available methods of shipping
+ */
 function filter_package_rates_methods_by_products_categories($available_methods) {
 
     $cart = WC()->cart->get_cart();

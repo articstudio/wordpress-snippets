@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Create a Wordpress taxonomy of product brand
+ */
 register_taxonomy('product_brand', array('product'), array(
     'hierarchical' => true,
     'update_count_callback' => '_wc_term_recount',

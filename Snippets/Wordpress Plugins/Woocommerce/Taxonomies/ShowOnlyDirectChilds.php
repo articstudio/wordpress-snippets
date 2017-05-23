@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Wordpress hook to alter main query, to display only children direct from a taxonomy
+ * @param $query Main query
+ */
 function show_only_direct_childs_on_tax($query) {
     if ($query->is_main_query() && !is_admin()) {
         $tax_query = $query->tax_query;
